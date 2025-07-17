@@ -8,7 +8,7 @@ import Image from "next/image"
 const features = [
   {
     icon: Users,
-    title: "More than 150 Users",
+    title: "More than 200 Users",
     description:
       "Join a global community that trusts Flippa Trading AI to trade smarter and earn daily — no experience needed.",
     image: "/forex.jpg",
@@ -50,10 +50,10 @@ const features = [
   },
 ]
 
-export default function FeaturesSection() {
+export default function FeaturesSection({ animationDelay }: { animationDelay: string }) {
   return (
-    <section className="py-24 px-6 lg:px-8 relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-900/50 to-transparent"></div>
+    <section className="py-24 px-6 lg:px-8 relative animate-fade-in-up" style={{ animationDelay }}>
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-deep-navy/50 to-transparent"></div>
 
       <div className="relative z-10 mx-auto max-w-7xl">
         {/* Header */}
@@ -82,7 +82,7 @@ export default function FeaturesSection() {
           {features.map((feature, index) => (
             <Card
               key={index}
-              className="bg-blue-900/50 border-blue-800 backdrop-blur-sm hover:bg-blue-900/70 transition-all duration-300"
+              className="bg-deep-navy/50 border-blue-800 backdrop-blur-sm hover:bg-deep-navy/70 transition-all duration-300"
             >
               <CardContent className="p-6">
                 {/* Feature Visual */}
@@ -122,7 +122,9 @@ export default function FeaturesSection() {
                             <div className="text-xs text-gray-400">Minutes</div>
                           </div>
                         </div>
-                        <div className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-blue-500 animate-pulse"></div>
+                        <div className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-blue-500 flex items-center justify-center">
+                          <Clock className="w-4 h-4 text-white" />
+                        </div>
                       </div>
                     </div>
                   )}

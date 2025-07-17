@@ -10,6 +10,8 @@ import CalculatorSection from "@/components/CalculatorSection"
 import ComparisonSection from "@/components/ComparisonSection"
 import PowerfulFeaturesSection from "@/components/PowerfulFeaturesSection"
 import FAQSection from "@/components/FAQSection"
+import BackToTopButton from "@/components/BackToTopButton" // Import the new component
+
 
 export default function Home() {
   return (
@@ -21,19 +23,19 @@ export default function Home() {
       </div>
 
       <div className="relative z-10">
-        <Header />
-        <HeroSection />
-        {/* <PartnersSection /> */}
-        <FeaturesSection />
-        <TestimonialsSection />
-        <HowItWorksSection />
-        <CalculatorSection />
-        <ComparisonSection />
-        <PowerfulFeaturesSection />
-        <FAQSection />
-        <CTASection />
-        <Footer />
+        <Header animationDelay="0s" />
+        <HeroSection animationDelay="0.2s" />
+        <FeaturesSection animationDelay="0.6s" />
+        <TestimonialsSection animationDelay="0.8s" />
+        <HowItWorksSection animationDelay="1.0s" />
+        <CalculatorSection animationDelay="1.2s" />
+        <ComparisonSection animationDelay="1.4s" />
+        <PowerfulFeaturesSection animationDelay="1.6s" />
+        <FAQSection animationDelay="1.8s" />
+        <CTASection animationDelay="2.0s" />
+        <Footer animationDelay="2.2s" />
       </div>
+       <BackToTopButton /> {/* Add the BackToTopButton here */}
     </main>
   )
 }

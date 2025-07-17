@@ -1,9 +1,7 @@
 "use client"
 
 import { Card, CardContent } from "@/components/ui/card"
-import { Play, Star } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import Image from "next/image"
+import { Star } from "lucide-react"
 
 const videoTestimonials = [
   {
@@ -81,13 +79,12 @@ const writtenTestimonials = [
     text: "I'm a cautious investor and don't like risk. I liked that this bot focuses on steady, consistent growth instead of wild trades. I've seen slow but steady growth, and that suits my goals perfectly.",
     featured: false,
   },
-];
+]
 
-
-export default function TestimonialsSection() {
+export default function TestimonialsSection({ animationDelay }: { animationDelay: string }) {
   return (
-    <section className="py-24 px-6 lg:px-8 relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-900/30 to-transparent"></div>
+    <section className="py-24 px-6 lg:px-8 relative animate-fade-in-up" style={{ animationDelay }}>
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-deep-navy/30 to-transparent"></div>
 
       <div className="relative z-10 mx-auto max-w-7xl">
         {/* Header */}
@@ -102,7 +99,7 @@ export default function TestimonialsSection() {
           {videoTestimonials.map((testimonial, index) => (
             <Card
               key={index}
-              className="bg-blue-900/50 border-blue-800 overflow-hidden hover:bg-blue-900/70 transition-all duration-300 group cursor-pointer"
+              className="bg-deep-navy/50 border-blue-800 overflow-hidden hover:bg-deep-navy/70 transition-all duration-300 group cursor-pointer"
             >
               <div className="relative aspect-[4/5]">
                 <Image
@@ -151,8 +148,8 @@ export default function TestimonialsSection() {
               className={`${
                 testimonial.featured
                   ? "bg-gradient-to-br from-blue-900/50 to-cyan-900/50 border-blue-700/50 col-span-1 md:col-span-2 lg:col-span-1"
-                  : "bg-blue-900/50 border-blue-800"
-              } backdrop-blur-sm hover:bg-blue-900/70 transition-all duration-300`}
+                  : "bg-deep-navy/50 border-blue-800"
+              } backdrop-blur-sm hover:bg-deep-navy/70 transition-all duration-300`}
             >
               <CardContent className="p-6">
                 {/* Header */}

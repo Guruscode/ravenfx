@@ -8,7 +8,7 @@ import { Zap } from "lucide-react"
 
 const monthOptions = [1, 3, 6, 12, 24, 36]
 
-export default function CalculatorSection() {
+export default function CalculatorSection({ animationDelay }: { animationDelay: string }) {
   const [initialInvestment, setInitialInvestment] = useState([1960])
   const [selectedMonths, setSelectedMonths] = useState(1)
 
@@ -30,8 +30,8 @@ export default function CalculatorSection() {
   }
 
   return (
-    <section className="py-24 px-6 lg:px-8 relative" id="calculator">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-900/30 to-transparent"></div>
+    <section className="py-24 px-6 lg:px-8 relative animate-fade-in-up" id="calculator" style={{ animationDelay }}>
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-deep-navy/30 to-transparent"></div>
 
       <div className="relative z-10 mx-auto max-w-7xl">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -56,7 +56,7 @@ export default function CalculatorSection() {
 
           {/* Right Calculator */}
           <div className="flex justify-center lg:justify-end">
-            <Card className="bg-blue-900/50 border-blue-500/30 backdrop-blur-sm w-full max-w-md">
+            <Card className="bg-deep-navy/50 border-blue-500/30 backdrop-blur-sm w-full max-w-md">
               <CardContent className="p-8">
                 {/* Initial Investment */}
                 <div className="mb-8">

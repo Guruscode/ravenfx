@@ -1,10 +1,10 @@
 import { Button } from "@/components/ui/button"
 import { Zap } from "lucide-react"
 
-export default function CTASection() {
+export default function CTASection({ animationDelay }: { animationDelay: string }) {
   return (
-    <section className="py-24 px-6 lg:px-8 relative">
-      <div className="absolute inset-0 bg-gradient-to-t from-blue-950 to-transparent"></div>
+    <section className="py-24 px-6 lg:px-8 relative animate-fade-in-up" style={{ animationDelay }}>
+      <div className="absolute inset-0 bg-gradient-to-t from-deep-navy to-transparent"></div>
       <div className="relative z-10 mx-auto max-w-4xl text-center">
         <h2 className="text-3xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl mb-8">
           Ready to Let AI Trade While You Sleep?

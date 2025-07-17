@@ -56,7 +56,7 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        "deep-navy": "#050510", // Even darker shade
+        "deep-navy": "#02020A", // Very dark shade, almost black
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -72,10 +72,15 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        "fade-in-up": {
+          "0%": { opacity: "0", transform: "translateY(20px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "fade-in-up": "fade-in-up 0.8s ease-out forwards", // Animation will now apply when in view
       },
     },
   },

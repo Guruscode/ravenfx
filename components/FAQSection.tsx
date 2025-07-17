@@ -37,10 +37,10 @@ const faqs = [
   },
 ]
 
-export default function FAQSection() {
+export default function FAQSection({ animationDelay }: { animationDelay: string }) {
   return (
-    <section className="py-24 px-6 lg:px-8 relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-900/30 to-transparent"></div>
+    <section className="py-24 px-6 lg:px-8 relative animate-fade-in-up" style={{ animationDelay }}>
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-deep-navy/30 to-transparent"></div>
 
       <div className="relative z-10 mx-auto max-w-4xl">
         {/* Header */}
@@ -54,7 +54,7 @@ export default function FAQSection() {
             <AccordionItem
               key={index}
               value={`item-${index}`}
-              className="bg-blue-900/50 border border-blue-800 rounded-lg overflow-hidden backdrop-blur-sm"
+              className="bg-deep-navy/50 border border-blue-800 rounded-lg overflow-hidden backdrop-blur-sm"
             >
               <AccordionTrigger className="px-6 py-4 text-lg font-semibold text-white hover:text-blue-400 transition-colors">
                 {faq.question}

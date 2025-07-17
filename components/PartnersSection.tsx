@@ -8,9 +8,9 @@ const partners = [
   { name: "ForexVPS.net", logo: "/logo-forexvps.png" },
 ]
 
-export default function PartnersSection() {
+export default function PartnersSection({ animationDelay }: { animationDelay: string }) {
   return (
-    <section className="py-16 px-6 lg:px-8">
+    <section className="py-16 px-6 lg:px-8 animate-fade-in-up" style={{ animationDelay }}>
       <div className="mx-auto max-w-7xl">
         <div className="relative w-full overflow-hidden">
           <div className="flex animate-logo-scroll whitespace-nowrap">

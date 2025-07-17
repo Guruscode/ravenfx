@@ -1,13 +1,13 @@
 "use client"
 
-import { Play, Zap } from "lucide-react"
+import { Play, Zap } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import Image from "next/image" // Re-import Image component
+import Image from "next/image"
 
-export default function HeroSection() {
+export default function HeroSection({ animationDelay }: { animationDelay: string }) {
   return (
-    <section className="relative px-6 pt-14 lg:px-8">
+    <section className="relative px-6 pt-14 lg:px-8 animate-fade-in-up" style={{ animationDelay }}>
       {/* Additional geometric overlay for hero */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,123,255,0.15),transparent_70%)]"></div>
 
@@ -16,7 +16,7 @@ export default function HeroSection() {
         <div className="flex justify-center mb-8">
           <Badge
             variant="secondary"
-            className="bg-blue-950/80 text-blue-300 border-blue-800 px-4 py-2 rounded-full backdrop-blur-sm"
+            className="bg-deep-navy/80 text-blue-300 border-blue-800 px-4 py-2 rounded-full backdrop-blur-sm"
           >
             <Zap className="w-4 h-4 mr-2" />
             Top Passive Income Platform
@@ -35,7 +35,7 @@ export default function HeroSection() {
           </h1>
 
           <p className="mt-6 text-lg leading-8 text-gray-400 max-w-2xl mx-auto">
-            Join The Most Used AI-Trading bot for FREE!
+            Join of The Most accurate Ai trading bot
           </p>
 
           {/* CTA Section - Updated button colors */}
@@ -55,7 +55,7 @@ export default function HeroSection() {
                 <div className="w-10 h-10 rounded-full bg-gradient-to-r from-cyan-400 to-pink-400 border-2 border-white shadow-lg"></div>
               </div> */}
               <div className="text-sm text-gray-400">
-                <div className="font-semibold text-white">More than 150 traders</div>
+                <div className="font-semibold text-white">More than 200 traders</div>
                 <div>around the world</div>
               </div>
             </div>
@@ -66,13 +66,13 @@ export default function HeroSection() {
         <div className="mt-16 flex justify-center">
           <div className="relative max-w-4xl w-full">
             <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-blue-900 to-blue-950 border border-blue-800/50">
-              <Image src="fore.jpg" alt="People analyzing trading data" fill className="object-cover" />
-              
+              <Image src="/hero-section-image.jpeg" alt="People analyzing trading data" fill className="object-cover" />
+              {/* Play button overlay removed as per previous turn, assuming it's not needed for static image */}
 
               {/* Overlay Text - Enhanced styling */}
               <div className="absolute bottom-8 left-8 right-8">
                 <div className="text-center">
-                 
+                  {/* Removed text as per previous turn */}
                 </div>
               </div>
             </div>

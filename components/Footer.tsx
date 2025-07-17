@@ -9,10 +9,10 @@ const navigation = [
   { name: "FAQ", href: "#faq" },
 ]
 
-export default function Footer() {
+export default function Footer({ animationDelay }: { animationDelay: string }) {
   return (
-    <footer className="py-16 px-6 lg:px-8 relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-blue-950"></div>
+    <footer className="py-16 px-6 lg:px-8 relative animate-fade-in-up" style={{ animationDelay }}>
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-deep-navy"></div>
       <div className="relative z-10 mx-auto max-w-7xl">
         {/* Navigation Links */}
         <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 mb-12">

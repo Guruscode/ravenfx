@@ -63,6 +63,9 @@
   * {
     @apply border-border;
   }
+  html {
+    scroll-behavior: smooth; /* Enable smooth scrolling for anchor links */
+  }
   body {
     @apply bg-deep-navy text-foreground; /* Updated background to deep navy */
   }

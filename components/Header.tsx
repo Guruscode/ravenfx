@@ -1,6 +1,6 @@
 "use client"
 import Link from "next/link"
-import { Menu } from "lucide-react"
+import { Menu } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 
@@ -13,9 +13,9 @@ const navigation = [
   { name: "FAQ", href: "#faq" },
 ]
 
-export default function Header() {
+export default function Header({ animationDelay }: { animationDelay: string }) {
   return (
-    <header className="relative z-50 w-full">
+    <header className="relative z-50 w-full animate-fade-in-up" style={{ animationDelay }}>
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
         {/* Logo */}
         <div className="flex lg:flex-1">
@@ -36,7 +36,7 @@ export default function Header() {
                 <span className="sr-only">Open main menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="bg-blue-950 border-blue-800">
+            <SheetContent side="right" className="bg-deep-navy border-blue-800">
               <div className="mt-6 flow-root">
                 <div className="-my-6 divide-y divide-blue-700">
                   <div className="space-y-2 py-6">

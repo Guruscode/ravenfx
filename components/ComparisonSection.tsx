@@ -44,10 +44,10 @@ const aiRobotTradingPoints = [
   },
 ]
 
-export default function ComparisonSection() {
+export default function ComparisonSection({ animationDelay }: { animationDelay: string }) {
   return (
-    <section className="py-24 px-6 lg:px-8 relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-900/30 to-transparent"></div>
+    <section className="py-24 px-6 lg:px-8 relative animate-fade-in-up" style={{ animationDelay }}>
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-deep-navy/30 to-transparent"></div>
 
       <div className="relative z-10 mx-auto max-w-7xl">
         {/* Header */}
@@ -63,7 +63,7 @@ export default function ComparisonSection() {
         {/* Comparison Cards */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Manual Trading Card */}
-          <Card className="bg-blue-900/50 border-blue-800 backdrop-blur-sm">
+          <Card className="bg-deep-navy/50 border-blue-800 backdrop-blur-sm">
             <CardContent className="p-8">
               <div className="flex items-center gap-4 mb-8">
                 <div className="w-12 h-12 rounded-full bg-blue-800 flex items-center justify-center">
@@ -83,7 +83,7 @@ export default function ComparisonSection() {
           </Card>
 
           {/* AI Robot Trading Card */}
-          <Card className="bg-blue-900/50 border-blue-500/30 backdrop-blur-sm">
+          <Card className="bg-deep-navy/50 border-blue-500/30 backdrop-blur-sm">
             <CardContent className="p-8">
               <div className="flex items-center gap-4 mb-8">
                 <div className="w-12 h-12 rounded-full bg-gradient-to-r from-blue-500 to-cyan-600 flex items-center justify-center">

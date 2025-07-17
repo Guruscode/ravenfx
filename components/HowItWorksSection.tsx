@@ -39,10 +39,10 @@ const steps = [
   },
 ]
 
-export default function HowItWorksSection() {
+export default function HowItWorksSection({ animationDelay }: { animationDelay: string }) {
   return (
-    <section className="py-24 px-6 lg:px-8 relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-900/30 to-transparent"></div>
+    <section className="py-24 px-6 lg:px-8 relative animate-fade-in-up" style={{ animationDelay }}>
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-deep-navy/30 to-transparent"></div>
 
       <div className="relative z-10 mx-auto max-w-6xl">
         {/* Header */}
@@ -69,7 +69,7 @@ export default function HowItWorksSection() {
             {steps.map((step, index) => (
               <div key={step.number} className="relative">
                 {/* Step Number Circle */}
-                <div className="absolute left-0.5 lg:left-1/2 lg:transform lg:-translate-x-1/2 -translate-y-1/2 top-0">
+                <div className="absolute left-4 lg:left-1/2 lg:transform lg:-translate-x-1/2 -translate-y-1/2 top-0">
                   <div className="w-12 h-12 rounded-full bg-gradient-to-r from-blue-500 to-cyan-600 flex items-center justify-center text-white font-bold text-lg border-4 border-blue-950 shadow-lg">
                     {step.number}
                   </div>
@@ -80,7 +80,7 @@ export default function HowItWorksSection() {
                   className={`flex flex-col items-center gap-12 pl-24 md:pl-0 ${index % 2 !== 0 ? "lg:flex-row-reverse" : "lg:flex-row"}`}
                 >
                   {/* Text Content */}
-                  <div className="flex-1 pt-6">
+                  <div className="flex-1 pt-6 order-2 lg:order-none">
                     <div
                       className={`max-w-lg text-left ${index % 2 === 0 ? "lg:ml-auto lg:text-right" : "lg:mr-auto"}`}
                     >
@@ -90,8 +90,8 @@ export default function HowItWorksSection() {
                   </div>
 
                   {/* Visual Content */}
-                  <div className="flex-1 pt-6">
-                    <Card className="bg-blue-900/50 border-blue-800 backdrop-blur-sm max-w-lg mx-auto">
+                  <div className="flex-1 pt-6 order-1 lg:order-none">
+                    <Card className="bg-deep-navy/50 border-blue-800 backdrop-blur-sm max-w-lg mx-auto">
                       <CardContent className="p-8">
                         <div className="aspect-video rounded-lg bg-gradient-to-br from-blue-800 to-blue-900 flex items-center justify-center relative overflow-hidden">
                           {/* Telegram Community Visual */}
@@ -125,7 +125,7 @@ export default function HowItWorksSection() {
                           {/* Sign Up Visual */}
                           {step.visual === "signup" && (
                             <div className="relative w-full h-full flex items-center justify-center">
-                              <div className="bg-blue-800 rounded-lg p-6 w-48 border border-blue-500/30">
+                              <div className="bg-deep-navy rounded-lg p-6 w-48 border border-blue-500/30">
                                 <div className="flex flex-col items-center space-y-4">
                                   <div className="w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center">
                                     <User className="w-6 h-6 text-white" />
@@ -152,7 +152,7 @@ export default function HowItWorksSection() {
                           {step.visual === "activate" && (
                             <div className="relative w-full h-full flex items-center justify-center">
                               <div className="relative">
-                                <div className="w-32 h-32 rounded-full border-4 border-blue-500 flex items-center justify-center bg-blue-800">
+                                <div className="w-32 h-32 rounded-full border-4 border-blue-500 flex items-center justify-center bg-deep-navy">
                                   <div className="w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 via-cyan-500 to-indigo-600 animate-pulse"></div>
                                 </div>
                                 <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-center">
