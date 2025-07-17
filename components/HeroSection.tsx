@@ -40,13 +40,20 @@ export default function HeroSection({ animationDelay }: { animationDelay: string
 
           {/* CTA Section - Updated button colors */}
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-6">
-            <Button
-              size="lg"
-              className="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700 text-white font-semibold py-3 px-8 rounded-full shadow-xl text-lg border border-blue-400/20"
-            >
-              <Zap className="w-5 h-5 mr-2" />
-              Get Instant Access
-            </Button>
+          <a
+        href="https://t.me/+lI3jSAYGC8thMjBk"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Button
+          size="lg"
+          className="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700 text-white font-semibold py-3 px-8 rounded-full shadow-xl text-lg border border-blue-400/20"
+        >
+          <Zap className="w-5 h-5 mr-2" />
+          Get Instant Access
+        </Button>
+      </a>
+
 
             <div className="flex items-center gap-3">
               {/* <div className="flex -space-x-2">
@@ -55,7 +62,7 @@ export default function HeroSection({ animationDelay }: { animationDelay: string
                 <div className="w-10 h-10 rounded-full bg-gradient-to-r from-cyan-400 to-pink-400 border-2 border-white shadow-lg"></div>
               </div> */}
               <div className="text-sm text-gray-400">
-                <div className="font-semibold text-white">More than 2000 traders</div>
+                <div className="font-semibold text-white">More than 200 traders</div>
                 <div>around the world</div>
               </div>
             </div>

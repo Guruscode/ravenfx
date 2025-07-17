@@ -83,9 +83,16 @@ export default function Header({ animationDelay = "0s" }: { animationDelay?: str
 
         {/* CTA Button */}
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+          <Link href="https://t.me/+lI3jSAYGC8thMjBk"
+           target="_blank"
+        rel="noopener noreferrer"
+          className="text-sm font-semibold leading-6 text-white hover:text-blue-300 transition-colors">  
           <Button className="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700 text-white font-semibold py-2 px-6 rounded-full shadow-lg">
             Get Instant Access
           </Button>
+          </Link>
+            
+               
         </div>
       </nav>
     </header>
