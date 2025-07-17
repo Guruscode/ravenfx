@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { useInView } from "@/hooks/use-in-view" // Import useInView
 
 const navigation = [
   { name: "Benefits", href: "#benefits" },
@@ -9,9 +10,15 @@ const navigation = [
   { name: "FAQ", href: "#faq" },
 ]
 
-export default function Footer({ animationDelay }: { animationDelay: string }) {
+export default function Footer({ animationDelay = "0s" }: { animationDelay?: string }) {
+  const { ref, isInView } = useInView({ threshold: 0.1 }) // Observe when 10% of element is visible
+
   return (
-    <footer className="py-16 px-6 lg:px-8 relative animate-fade-in-up" style={{ animationDelay }}>
+    <footer
+      ref={ref}
+      className={`py-16 px-6 lg:px-8 relative ${isInView ? "animate-fade-in-up" : "opacity-0"}`}
+      style={{ animationDelay }}
+    >
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-deep-navy"></div>
       <div className="relative z-10 mx-auto max-w-7xl">
         {/* Navigation Links */}

@@ -1,4 +1,5 @@
 import Image from "next/image"
+import { useInView } from "@/hooks/use-in-view" // Import useInView
 
 const partners = [
   { name: "fxbook", logo: "/logo-fxbook.png" },
@@ -8,9 +9,15 @@ const partners = [
   { name: "ForexVPS.net", logo: "/logo-forexvps.png" },
 ]
 
-export default function PartnersSection({ animationDelay }: { animationDelay: string }) {
+export default function PartnersSection({ animationDelay = "0s" }: { animationDelay?: string }) {
+  const { ref, isInView } = useInView({ threshold: 0.1 }) // Observe when 10% of element is visible
+
   return (
-    <section className="py-16 px-6 lg:px-8 animate-fade-in-up" style={{ animationDelay }}>
+    <section
+      ref={ref}
+      className={`py-16 px-6 lg:px-8 ${isInView ? "animate-fade-in-up" : "opacity-0"}`}
+      style={{ animationDelay }}
+    >
       <div className="mx-auto max-w-7xl">
         <div className="relative w-full overflow-hidden">
           <div className="flex animate-logo-scroll whitespace-nowrap">

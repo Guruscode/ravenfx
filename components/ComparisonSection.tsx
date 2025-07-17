@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { XCircle, CheckCircle, Zap, Hand, Bot } from "lucide-react"
+import { useInView } from "@/hooks/use-in-view" // Import useInView
 
 const manualTradingPoints = [
   {
@@ -44,9 +45,15 @@ const aiRobotTradingPoints = [
   },
 ]
 
-export default function ComparisonSection({ animationDelay }: { animationDelay: string }) {
+export default function ComparisonSection({ animationDelay = "0s" }: { animationDelay?: string }) {
+  const { ref, isInView } = useInView({ threshold: 0.1 }) // Observe when 10% of element is visible
+
   return (
-    <section className="py-24 px-6 lg:px-8 relative animate-fade-in-up" style={{ animationDelay }}>
+    <section
+      ref={ref}
+      className={`py-24 px-6 lg:px-8 relative ${isInView ? "animate-fade-in-up" : "opacity-0"}`}
+      style={{ animationDelay }}
+    >
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-deep-navy/30 to-transparent"></div>
 
       <div className="relative z-10 mx-auto max-w-7xl">

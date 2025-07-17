@@ -81,12 +81,7 @@ export default function FeaturesSection({ animationDelay }: { animationDelay: st
               <CardContent className="p-6">
                 {/* Feature Visual */}
                 <div className="mb-6 h-48 rounded-lg overflow-hidden bg-gradient-to-br from-blue-800 to-blue-900 flex items-center justify-center relative">
-                  <Image
-                    src={feature.image || "/placeholder.svg"}
-                    alt={feature.title}
-                    fill
-                    className="object-cover"
-                  />
+                  <Image src={feature.image || "/placeholder.svg"} alt={feature.title} fill className="object-cover" />
                 </div>
 
                 {/* Feature Content */}

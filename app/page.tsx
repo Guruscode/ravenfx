@@ -1,3 +1,5 @@
+"use client" 
+
 import Header from "@/components/Header"
 import HeroSection from "@/components/HeroSection"
 import CTASection from "@/components/CTASection"
@@ -12,7 +14,6 @@ import PowerfulFeaturesSection from "@/components/PowerfulFeaturesSection"
 import FAQSection from "@/components/FAQSection"
 import BackToTopButton from "@/components/BackToTopButton" // Import the new component
 
-
 export default function Home() {
   return (
     <main className="min-h-screen bg-deep-navy relative overflow-hidden">
@@ -21,21 +22,21 @@ export default function Home() {
         <div className="absolute inset-0 bg-[linear-gradient(rgba(0,192,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,192,255,0.03)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,123,255,0.1),transparent_70%)]"></div>
       </div>
-
       <div className="relative z-10">
         <Header animationDelay="0s" />
-        <HeroSection animationDelay="0.2s" />
-        <FeaturesSection animationDelay="0.6s" />
-        <TestimonialsSection animationDelay="0.8s" />
-        <HowItWorksSection animationDelay="1.0s" />
-        <CalculatorSection animationDelay="1.2s" />
-        <ComparisonSection animationDelay="1.4s" />
-        <PowerfulFeaturesSection animationDelay="1.6s" />
-        <FAQSection animationDelay="1.8s" />
-        <CTASection animationDelay="2.0s" />
-        <Footer animationDelay="2.2s" />
+        <HeroSection animationDelay="0.1s" />
+       
+        <FeaturesSection animationDelay="0.3s" />
+        <TestimonialsSection animationDelay="0.4s" />
+        <HowItWorksSection animationDelay="0.5s" />
+        <CalculatorSection animationDelay="0.6s" />
+        <ComparisonSection animationDelay="0.7s" />
+        <PowerfulFeaturesSection animationDelay="0.8s" />
+        <FAQSection animationDelay="0.9s" />
+        <CTASection animationDelay="1.0s" />
+        <Footer animationDelay="1.1s" />
       </div>
-       <BackToTopButton /> {/* Add the BackToTopButton here */}
+      <BackToTopButton /> {/* Add the BackToTopButton here */}
     </main>
   )
 }

@@ -5,12 +5,14 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Slider } from "@/components/ui/slider"
 import { Zap } from "lucide-react"
+import { useInView } from "@/hooks/use-in-view" // Import useInView
 
 const monthOptions = [1, 3, 6, 12, 24, 36]
 
-export default function CalculatorSection({ animationDelay }: { animationDelay: string }) {
+export default function CalculatorSection({ animationDelay = "0s" }: { animationDelay?: string }) {
   const [initialInvestment, setInitialInvestment] = useState([1960])
   const [selectedMonths, setSelectedMonths] = useState(1)
+  const { ref, isInView } = useInView({ threshold: 0.1 }) // Observe when 10% of element is visible
 
   // Calculate total amount with compound interest (assuming 15% monthly growth)
   const calculateTotal = () => {
@@ -30,7 +32,12 @@ export default function CalculatorSection({ animationDelay }: { animationDelay: 
   }
 
   return (
-    <section className="py-24 px-6 lg:px-8 relative animate-fade-in-up" id="calculator" style={{ animationDelay }}>
+    <section
+      ref={ref}
+      className={`py-24 px-6 lg:px-8 relative ${isInView ? "animate-fade-in-up" : "opacity-0"}`}
+      id="calculator"
+      style={{ animationDelay }}
+    >
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-deep-navy/30 to-transparent"></div>
 
       <div className="relative z-10 mx-auto max-w-7xl">

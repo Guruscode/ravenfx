@@ -1,6 +1,6 @@
 "use client"
 
-import { Play, Zap } from 'lucide-react'
+import { Zap } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import Image from "next/image"
@@ -71,9 +71,7 @@ export default function HeroSection({ animationDelay }: { animationDelay: string
 
               {/* Overlay Text - Enhanced styling */}
               <div className="absolute bottom-8 left-8 right-8">
-                <div className="text-center">
-                  {/* Removed text as per previous turn */}
-                </div>
+                <div className="text-center">{/* Removed text as per previous turn */}</div>
               </div>
             </div>
           </div>

@@ -1,8 +1,9 @@
 "use client"
 import Link from "next/link"
-import { Menu } from 'lucide-react'
+import { Menu } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { useInView } from "@/hooks/use-in-view" // Import useInView
 
 const navigation = [
   { name: "Benefits", href: "#benefits" },
@@ -13,9 +14,15 @@ const navigation = [
   { name: "FAQ", href: "#faq" },
 ]
 
-export default function Header({ animationDelay }: { animationDelay: string }) {
+export default function Header({ animationDelay = "0s" }: { animationDelay?: string }) {
+  const { ref, isInView } = useInView({ threshold: 0.1 }) // Observe when 10% of element is visible
+
   return (
-    <header className="relative z-50 w-full animate-fade-in-up" style={{ animationDelay }}>
+    <header
+      ref={ref}
+      className={`relative z-50 w-full ${isInView ? "animate-fade-in-up" : "opacity-0"}`}
+      style={{ animationDelay }}
+    >
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
         {/* Logo */}
         <div className="flex lg:flex-1">

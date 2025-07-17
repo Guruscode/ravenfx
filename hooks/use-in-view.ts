@@ -8,12 +8,8 @@ export function useInView(options?: IntersectionObserverInit) {
 
   useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => {
-      // Update our state when observer callback fires
-      if (entry.isIntersecting) {
-        setIsInView(true)
-        // Optionally, unobserve once it's in view if you only want it to animate once
-        observer.unobserve(entry.target)
-      }
+      // Update our state based on whether the element is intersecting
+      setIsInView(entry.isIntersecting)
     }, options)
 
     if (ref.current) {
