@@ -66,7 +66,7 @@ export default function HeroSection({ animationDelay }: { animationDelay: string
         <div className="mt-16 flex justify-center">
           <div className="relative max-w-4xl w-full">
             <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-blue-900 to-blue-950 border border-blue-800/50">
-              <Image src="/hero-section-image.jpeg" alt="People analyzing trading data" fill className="object-cover" />
+              <Image src="/1.png" alt="People analyzing trading data" fill className="object-cover" />
               {/* Play button overlay removed as per previous turn, assuming it's not needed for static image */}
 
               {/* Overlay Text - Enhanced styling */}
