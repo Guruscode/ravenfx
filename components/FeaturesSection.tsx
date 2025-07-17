@@ -8,10 +8,10 @@ import Image from "next/image"
 const features = [
   {
     icon: Users,
-    title: "More than 74,000 Users",
+    title: "More than 150 Users",
     description:
       "Join a global community that trusts Flippa Trading AI to trade smarter and earn daily — no experience needed.",
-    image: "/placeholder.svg?height=200&width=300",
+    image: "/forex.jpg",
   },
   {
     icon: Bot,

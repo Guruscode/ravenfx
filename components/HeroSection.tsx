@@ -49,13 +49,13 @@ export default function HeroSection() {
             </Button>
 
             <div className="flex items-center gap-3">
-              <div className="flex -space-x-2">
+              {/* <div className="flex -space-x-2">
                 <div className="w-10 h-10 rounded-full bg-gradient-to-r from-blue-400 to-cyan-400 border-2 border-white shadow-lg"></div>
                 <div className="w-10 h-10 rounded-full bg-gradient-to-r from-green-400 to-blue-400 border-2 border-white shadow-lg"></div>
                 <div className="w-10 h-10 rounded-full bg-gradient-to-r from-cyan-400 to-pink-400 border-2 border-white shadow-lg"></div>
-              </div>
+              </div> */}
               <div className="text-sm text-gray-400">
-                <div className="font-semibold text-white">More than 74,000 traders</div>
+                <div className="font-semibold text-white">More than 150 traders</div>
                 <div>around the world</div>
               </div>
             </div>
@@ -66,7 +66,7 @@ export default function HeroSection() {
         <div className="mt-16 flex justify-center">
           <div className="relative max-w-4xl w-full">
             <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-blue-900 to-blue-950 border border-blue-800/50">
-              <Image src="/hero-section-image.jpeg" alt="People analyzing trading data" fill className="object-cover" />
+              <Image src="fore.jpg" alt="People analyzing trading data" fill className="object-cover" />
               
 
               {/* Overlay Text - Enhanced styling */}

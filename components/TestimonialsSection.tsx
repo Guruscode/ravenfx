@@ -35,8 +35,8 @@ const videoTestimonials = [
 
 const writtenTestimonials = [
   {
-    name: "Sergio Dos Santos",
-    initials: "SD",
+    name: "Adebola Salami",
+    initials: "AS",
     rating: 5,
     text: "I plan to keep this running long-term. The profits might be smaller per day, but they compound quickly and reliably.",
     featured: false,
@@ -47,41 +47,42 @@ const writtenTestimonials = [
     rating: 3.9,
     text: "396 Reviews",
     featured: true,
-    avatars: [
-      "/placeholder.svg?height=40&width=40",
-      "/placeholder.svg?height=40&width=40",
-      "/placeholder.svg?height=40&width=40",
-    ],
+    // avatars: [
+    //   "",
+    //   "/placeholder.svg?height=40&width=40",
+    //   "/placeholder.svg?height=40&width=40",
+    // ],
   },
   {
-    name: "Christian Piron",
-    initials: "CP",
+    name: "Chuka Nwosu",
+    initials: "CN",
     rating: 5,
     text: "The transparency of this company really stood out to me. They openly share their results, risks, and how they make money. It made me feel comfortable trusting them with my trading needs.",
     featured: false,
   },
   {
-    name: "Elise Pedersen",
-    initials: "EP",
+    name: "Iretioluwa Bamidele",
+    initials: "IB",
     rating: 5,
     text: "Flippa Trading's AI has been a game-changer for me.",
     featured: false,
   },
   {
-    name: "Gunter Braun",
-    initials: "GB",
+    name: "Yakubu Ibrahim",
+    initials: "YI",
     rating: 5,
     text: "As someone with no experience in forex, I was intimidated at first. But the bot takes care of everything, and I'm finally earning from a market I used to avoid.",
     featured: false,
   },
   {
-    name: "Afua Asamoah",
-    initials: "AA",
+    name: "Fatima Okeke",
+    initials: "FO",
     rating: 5,
     text: "I'm a cautious investor and don't like risk. I liked that this bot focuses on steady, consistent growth instead of wild trades. I've seen slow but steady growth, and that suits my goals perfectly.",
     featured: false,
   },
-]
+];
+
 
 export default function TestimonialsSection() {
   return (
@@ -97,7 +98,7 @@ export default function TestimonialsSection() {
         </div>
 
         {/* Video Testimonials */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {videoTestimonials.map((testimonial, index) => (
             <Card
               key={index}
@@ -111,12 +112,12 @@ export default function TestimonialsSection() {
                   className="object-cover"
                 />
 
-                {/* Overlay */}
+           
                 <div
                   className={`absolute inset-0 bg-gradient-to-t ${testimonial.gradient || "from-blue-900/80 via-transparent to-blue-900/40"}`}
                 ></div>
 
-                {/* Play Button */}
+             
                 <div className="absolute inset-0 flex items-center justify-center">
                   <Button
                     size="lg"
@@ -127,7 +128,7 @@ export default function TestimonialsSection() {
                   </Button>
                 </div>
 
-                {/* Content */}
+              
                 <div className="absolute bottom-0 left-0 right-0 p-4">
                   <div className="bg-gradient-to-r from-yellow-400 to-orange-400 text-black text-xs font-bold px-2 py-1 rounded mb-2 inline-block">
                     {testimonial.title}
@@ -140,7 +141,7 @@ export default function TestimonialsSection() {
               </div>
             </Card>
           ))}
-        </div>
+        </div> */}
 
         {/* Written Testimonials */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -191,7 +192,7 @@ export default function TestimonialsSection() {
                 {testimonial.featured ? (
                   <div className="text-center">
                     <div className="text-gray-300 mb-4">{testimonial.text}</div>
-                    {testimonial.avatars && (
+                    {/* {testimonial.avatars && (
                       <div className="flex justify-center -space-x-2">
                         {testimonial.avatars.map((avatar, i) => (
                           <div
@@ -200,7 +201,7 @@ export default function TestimonialsSection() {
                           ></div>
                         ))}
                       </div>
-                    )}
+                    )} */}
                   </div>
                 ) : (
                   <p className="text-gray-400 text-sm leading-relaxed">{testimonial.text}</p>
