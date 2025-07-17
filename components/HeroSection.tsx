@@ -62,7 +62,7 @@ export default function HeroSection({ animationDelay }: { animationDelay: string
                 <div className="w-10 h-10 rounded-full bg-gradient-to-r from-cyan-400 to-pink-400 border-2 border-white shadow-lg"></div>
               </div> */}
               <div className="text-sm text-gray-400">
-                <div className="font-semibold text-white">More than 200 traders</div>
+                <div className="font-semibold text-white">More than 2000 traders</div>
                 <div>around the world</div>
               </div>
             </div>
