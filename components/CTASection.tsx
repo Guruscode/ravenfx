@@ -18,7 +18,7 @@ export default function CTASection({ animationDelay = "0s" }: { animationDelay?:
         </h2>
 
         <p className="text-lg leading-8 text-gray-400 max-w-3xl mx-auto mb-12">
-          Join over 74,000 users who are earning daily profits with zero effort. It's free, fast, and beginner-friendly
+          Join over 2000 users who are earning daily profits with zero effort. It's free, fast, and beginner-friendly
           — start in just 20 minutes.
         </p>
 

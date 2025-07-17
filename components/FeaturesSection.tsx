@@ -8,7 +8,7 @@ import Image from "next/image"
 const features = [
   {
     image: "/10.jpeg",
-    title: "More than 200 Users",
+    title: "More than 2000 Users",
     description:
       "Join a global community that trusts Flippa Trading AI to trade smarter and earn daily — no experience needed.",
   },
