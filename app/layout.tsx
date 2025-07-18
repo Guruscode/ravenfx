@@ -1,8 +1,8 @@
 import type React from "react";
 import type { Metadata } from "next";
 import { Figtree } from "next/font/google";
-import Head from "next/head"; // Import Head from next/head
 import "./globals.css";
+import Script from "next/script";
 
 const figtree = Figtree({
   subsets: ["latin"],
@@ -24,9 +24,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={figtree.variable}>
-      <Head>
-        {/* Meta Pixel Code */}
-        <script
+      <body className={`${figtree.className} antialiased`}>
+        {children}
+        {/* Meta Pixel Script using next/script */}
+        <Script
+          id="meta-pixel"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               !function(f,b,e,v,n,t,s)
@@ -42,6 +45,7 @@ export default function RootLayout({
             `,
           }}
         />
+        {/* Noscript fallback */}
         <noscript>
           <img
             height="1"
@@ -51,9 +55,7 @@ export default function RootLayout({
             alt=""
           />
         </noscript>
-        {/* End Meta Pixel Code */}
-      </Head>
-      <body className={`${figtree.className} antialiased`}>{children}</body>
+      </body>
     </html>
   );
 }
