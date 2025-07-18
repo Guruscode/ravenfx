@@ -73,14 +73,14 @@ const config = {
           to: { height: "0" },
         },
         "fade-in-up": {
-          "0%": { opacity: "0", transform: "translateY(80px)" }, // Increased translateY for stronger effect
+          "0%": { opacity: "0", transform: "translateY(100px)" }, // Increased translateY for a stronger effect
           "100%": { opacity: "1", transform: "translateY(0)" },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "fade-in-up": "fade-in-up 1.2s ease-out forwards", // Increased duration for stronger effect
+        "fade-in-up": "fade-in-up 1.5s ease-out forwards", // Increased duration for a more noticeable effect
       },
     },
   },
